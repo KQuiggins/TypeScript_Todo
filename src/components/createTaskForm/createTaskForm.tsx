@@ -21,7 +21,7 @@ const CreateTaskForm: FC = (): ReactElement => {
 			</Typography>
 
 			<Stack sx={{ width: '100%' }} spacing={2}>
-				<TaskTitleField />
+				<TaskTitleField  disabled/>
 				<TaskDescriptionField />
 			</Stack>
 		</Box>

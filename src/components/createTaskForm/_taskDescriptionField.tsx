@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FC, ReactElement } from 'react';
 import { TextField } from '@mui/material';
 import { ITextField } from './interfaces/ITextField';
@@ -26,6 +27,11 @@ const TaskDescriptionField: FC<ITextField> = (props): ReactElement => {
 			
 		/>
 	);
+};
+
+TaskDescriptionField.propTypes = {
+	onChange: PropTypes.func,
+	disabled: PropTypes.bool,
 };
 
 export default TaskDescriptionField;

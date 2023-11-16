@@ -4,6 +4,7 @@ import { Box, Typography, Stack } from '@mui/material';
 import TaskTitleField from './_taskTitleField';
 import TaskDescriptionField from './_taskDescriptionField';
 import TaskDateField from './_taskDateField';
+import TaskSelectField from './_taskSelectField';
 
 //import PropTypes from 'prop-types';
 
@@ -17,14 +18,26 @@ const CreateTaskForm: FC = (): ReactElement => {
 			px={4}
 			my={6}
 		>
-			<Typography variant='h4' component='div' sx={{ mt: 1 }}>
+			<Typography mb={2} component='h2' variant='h6'>
 				Create Task
 			</Typography>
 
-			<Stack sx={{ width: '100%' }} spacing={2}>
+			<Stack sx={{ width: '100%' }} spacing={2} mb={2}>
 				<TaskTitleField />
 				<TaskDescriptionField />
 				<TaskDateField />
+				
+			</Stack>
+
+			<Stack
+				direction='row'
+				justifyContent='flex-end'
+				alignItems='center'
+				sx={{ width: '100%' }}
+				spacing={2}
+			>
+				<TaskSelectField />
+				<TaskSelectField />
 			</Stack>
 		</Box>
 	);

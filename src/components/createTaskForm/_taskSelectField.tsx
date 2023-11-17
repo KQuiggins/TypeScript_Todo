@@ -1,5 +1,6 @@
 import { FC, ReactElement } from 'react';
 import { ISelectField } from './interfaces/ISelectField';
+import PropTypes from 'prop-types';
 import {
 	Select,
 	FormControl,
@@ -39,6 +40,18 @@ const TaskSelectField: FC<ISelectField> = (props): ReactElement => {
         
     </FormControl>
     );
+};
+
+TaskSelectField.propTypes = {
+    name: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+    items: PropTypes.arrayOf(PropTypes.shape({
+        value: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired
+    }).isRequired),
+    disabled: PropTypes.bool,
 };
 
 export default TaskSelectField;
